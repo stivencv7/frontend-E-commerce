@@ -1,0 +1,34 @@
+.form-add-producto{
+    display: flex;
+    gap: 50px;
+}
+
+.form-producto-img{
+    width: 76%;
+}
+
+.content-img-form-producto{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.content-img{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-inputs-from-producto{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn-eliminar-img{
+    position: fixed;
+    top: 433px;
+}

@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background:rgb(255, 254, 254);
+}
+.letra-logo{
+    
+    color:rgb(68, 158, 243);
+}
+.logo{
+    font-family: 'Caveat', cursive;
+    font-size: 64px;
+}
+.icon-login::before{
+    font-size: 25px;
+}

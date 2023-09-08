@@ -1,0 +1,17 @@
+.form-usuario{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+    gap: 20px;
+
+
+}
+
+.heder-form-usuario{
+   display: flex;
+   align-items: center;
+   gap: 20px;
+   margin-top: 30px;
+   justify-content: space-between;
+}

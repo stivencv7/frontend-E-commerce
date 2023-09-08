@@ -1,0 +1,17 @@
+.div-inventario{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.divs-inventario{
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 3px 6px rgb(207, 207, 207);
+    height: 7vh;
+}
+.divs-inventario:hover{
+    box-shadow: 5px 3px 20px rgb(207, 207, 207);
+}
