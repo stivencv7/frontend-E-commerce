@@ -1,0 +1,23 @@
+<div class="div-main-carro">
+    <div class="div-for-carro" *ngFor="let item of items">
+
+        <div class="div-car">
+            <img style="width: 100%" [src]="item.producto.urlImg" alt="">
+        </div>
+        <div class="div-cantidad-precio">
+            
+            <div>
+                <p-inputNumber ngModel={{item.cantidad}} mode="decimal" [showButtons]="true"  inputId="minmax-buttons" [min]="1"
+                [max]="item.producto.cantidad" class="input-cantidad-item"  (onInput)="verTotal($event.value,item)" ></p-inputNumber>
+            </div>
+            <div>
+                <h5>$ {{item.producto.precio*item.cantidad}}</h5>
+            </div>
+            
+        </div>
+
+    </div>
+    <div>
+        <h5>Total:{{getTotal()}}</h5>
+    </div>
+</div>

@@ -12,7 +12,7 @@ export class ProductoService {
   constructor(private httpClient:HttpClient) { }
 
   getProductos():Observable<Producto[]>{
-    return this.httpClient.get<Producto[]>("http://localhost:8080/api/producto/productos");
+    return this.httpClient.get<Producto[]>("http://localhost:8080/api/producto/visibles");
   }
   saveProducto(producto:Producto):Observable<Producto>{
     return this.httpClient.post<Producto>("http://localhost:8080/api/producto/producto",producto).pipe(
