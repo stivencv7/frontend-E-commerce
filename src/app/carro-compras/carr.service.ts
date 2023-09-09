@@ -22,7 +22,16 @@ export class CarrService {
         })
     )
   }
-  getTotal():Observable<number>{
-    return this.http.get<number>("http://localhost:8080/total")
+
+  updateItem(item:Item):Observable<Item>{
+    return this.http.put<Item>("http://localhost:8080/update",item).pipe(
+      catchError(
+        err=>{
+          return throwError (err)
+        })
+    )
   }
+  /*getTotal():Observable<number>{
+    return this.http.get<number>("http://localhost:8080/total")
+  }*/
 }

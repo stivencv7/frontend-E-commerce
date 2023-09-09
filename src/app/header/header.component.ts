@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   items:Item[]
   @Input()
   lengt:number;
-  valorTotal:number;
+  valorTotal:number=0;
 
   constructor(private carroService:CarrService,public carr:Carro,private service:ServiceService){}
 

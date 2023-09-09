@@ -21,11 +21,14 @@ import {CloudinaryModule} from '@cloudinary/ng';
 import { InputTextModule } from 'primeng/inputtext';
 import{DialogModule} from 'primeng/dialog';
 import{SidebarModule} from 'primeng/sidebar';
+import { SliderModule } from 'primeng/slider';
+import { InputNumberModule } from 'primeng/inputnumber';
 
 import { CategoriaComponent } from './inventario/categoria/categoria.component';
 import { CarroComponent } from './carro-compras/carro.component';
 import { Carro } from './carro-compras/carro';
-import { InputNumberModule } from 'primeng/inputnumber';
+
+
 
 const routes:Routes=[
   {path:'',redirectTo:'index',pathMatch:'full'},
@@ -60,6 +63,7 @@ const routes:Routes=[
     CloudinaryModule,
     SidebarModule,
     InputNumberModule,
+    SliderModule,
     RouterModule.forRoot(routes)
     
   ],
