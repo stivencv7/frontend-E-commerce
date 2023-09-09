@@ -20,7 +20,15 @@ import {CloudinaryModule} from '@cloudinary/ng';
 
 import { InputTextModule } from 'primeng/inputtext';
 import{DialogModule} from 'primeng/dialog';
+import{SidebarModule} from 'primeng/sidebar';
+import { SliderModule } from 'primeng/slider';
+import { InputNumberModule } from 'primeng/inputnumber';
+
 import { CategoriaComponent } from './inventario/categoria/categoria.component';
+import { CarroComponent } from './carro-compras/carro.component';
+import { Carro } from './carro-compras/carro';
+
+
 
 const routes:Routes=[
   {path:'',redirectTo:'index',pathMatch:'full'},
@@ -28,6 +36,7 @@ const routes:Routes=[
   {path:'form/registrase',component:FormUsuarioComponent},
   {path:'inventario',component:InventarioComponent},
   {path:'inventario/producto',component:ProductoComponent}
+
 ]
 
 @NgModule({
@@ -41,7 +50,8 @@ const routes:Routes=[
     InventarioComponent,
     ProductoComponent,
     FormProductoComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    CarroComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -51,10 +61,13 @@ const routes:Routes=[
     InputTextModule,
     DialogModule,
     CloudinaryModule,
+    SidebarModule,
+    InputNumberModule,
+    SliderModule,
     RouterModule.forRoot(routes)
     
   ],
-  providers: [],
+  providers: [Carro],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

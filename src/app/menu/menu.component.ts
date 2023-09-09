@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-
+  
+  rango(cantidad:number){
+    console.log(cantidad)
+  }
 }

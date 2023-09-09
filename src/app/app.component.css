@@ -1,8 +1,6 @@
 .div-principal{
     display: flex;
    
-    
-   
 }
 
 .div-header{
@@ -10,13 +8,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 50%;
     box-shadow: 5px 3px 6px rgb(226, 226, 226) ;
-   
-   
+    position: fixed;
+    z-index: 300px;
 }
 
 .div-body{
     width: 71.6%;
     
+}
+
+.pared{
+    margin-left: 20%;
+}
+
+.pared-header{
+    margin-top: 10%;
 }

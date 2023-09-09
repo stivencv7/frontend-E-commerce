@@ -1,14 +1,21 @@
 <nav class="header">
-    <div>
+    <div class="div-header-logo-input">
         <h1 class="logo"><span class="letra-logo">E</span>-commerce</h1>
+        <div>
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input type="text" pInputText  style="width: 149%;" />
+            </span>
+        </div>
     </div>
+    
     <div>
-        <span class="p-input-icon-left">
-            <i class="pi pi-search"></i>
-            <input type="text" pInputText  />
-        </span>
-    </div>
-    <div>
+
+        <button (click)="modoVisible()" class="btn btn-login"><i class="bi bi-cart4 icon-login"></i>{{lengt}}</button>
         <button class="btn btn-login"><i class="bi bi-person-circle icon-login"></i></button>
+       
     </div>
 </nav>
+<p-sidebar [(visible)]="sidebarVisible" position="right" [style]="{ width: '30vw' }" >
+    <app-carro [items]="items" [valorTotal]="valorTotal"></app-carro>
+</p-sidebar>

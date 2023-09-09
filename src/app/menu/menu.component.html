@@ -3,7 +3,7 @@
     <h6>Menu</h6>
     
     <div>
-        <a href="#"><i class="bi bi-shop-window"></i> Inicio</a>
+        <a [routerLink]="['/index']"><i class="bi bi-shop-window"></i> Inicio</a>
     </div>
 
     <div>
@@ -11,6 +11,8 @@
     </div>
     <div>
         <a [routerLink]="['/form/registrase']"><i class="bi bi-funnel"></i> Filter</a>
+        <br>
+        <p-slider ngModel="0" [min]="100" [max]="10000000" (ngModelChange)="rango($event)"></p-slider>
     </div>
     <div>
         <a [routerLink]="['/inventario']"><i class="bi bi-journal-text"></i> Inventario</a>

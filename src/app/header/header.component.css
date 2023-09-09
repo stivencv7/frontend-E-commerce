@@ -1,12 +1,21 @@
 .header{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background:rgb(255, 254, 254);
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
+    padding-left: 35px;
+    padding-right: 35px;
+    
 }
 .letra-logo{
     
     color:rgb(68, 158, 243);
+    /*color: #FF9B50;*/
+    color:rgb(255, 119, 0);
 }
 .logo{
     font-family: 'Caveat', cursive;
@@ -14,4 +23,8 @@
 }
 .icon-login::before{
     font-size: 25px;
+}
+.div-header-logo-input{
+   display: flex; align-items: center; gap: 30px;
+   width: 49%;
 }

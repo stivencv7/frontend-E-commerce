@@ -6,4 +6,8 @@ a{
     color: black !important;
 }
 
+.div-cantidad-precio .p-inputnumber-buttons-stacked .p-inputnumber-input{
+    width: 80px ;
+}
+
 
