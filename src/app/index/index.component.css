@@ -9,7 +9,7 @@ gap: 40px;
 .card-index{
     display: flex;
     width:30%;
-    box-shadow: 5px 7px 5px 5px rgb(240, 214, 211);
+    /*box-shadow: 5px 7px 5px 5px rgb(240, 214, 211);*/
     
     
 }
@@ -29,8 +29,9 @@ gap: 40px;
     height: 100%;
 }
 .btn-car{
-   /* background: #FF9B50 !important;*/
-   background: rgb(255, 119, 0);
+   /* background: #FF9B50 !important;
+   background: rgb(255, 119, 0);*/
+   background-color: #Ff6600;
     color: white;
     
 }

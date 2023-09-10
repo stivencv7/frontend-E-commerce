@@ -14,6 +14,7 @@ export class ProductoService {
   getProductos():Observable<Producto[]>{
     return this.httpClient.get<Producto[]>("http://localhost:8080/api/producto/visibles");
   }
+  
   saveProducto(producto:Producto):Observable<Producto>{
     return this.httpClient.post<Producto>("http://localhost:8080/api/producto/producto",producto).pipe(
       catchError(error=>{
@@ -25,5 +26,9 @@ export class ProductoService {
 
   getCategorias():Observable<Categoria[]>{
     return this.httpClient.get<Categoria[]>("http://localhost:8080/api/categoria/categorias");
+  }
+  
+  getRangoPrecio(rangoPrecioMax:number):Observable<Producto[]>{
+    return this.httpClient.get<Producto[]>("http://localhost:8080/api/producto/precio/rango/"+rangoPrecioMax);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ProductoService } from './producto.service';
 import { Producto } from './producto';
 import { Categoria } from '../categoria/categoria';
@@ -11,6 +11,7 @@ import { Categoria } from '../categoria/categoria';
 export class ProductoComponent implements OnInit { 
   
   public visible:boolean=false;
+  @Input()
   public productos:Producto[];
 
   constructor(private serviceProducto:ProductoService){}
@@ -23,7 +24,7 @@ export class ProductoComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.serviceProducto.getProductos().subscribe(productos=>{
       this.productos=productos;
     })

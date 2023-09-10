@@ -9,9 +9,11 @@
         </div>
     </div>
     
-    <div>
+    <div style="display: flex;gap: 15px;">
 
-        <button (click)="modoVisible()" class="btn btn-login"><i class="bi bi-cart4 icon-login"></i>{{lengt}}</button>
+        <button (click)="modoVisible()" class="btn btn-car"><i class="bi bi-cart4 icon-login"></i>
+            <p-badge class="length" [value]="lengt"></p-badge>
+        </button>
         <button class="btn btn-login"><i class="bi bi-person-circle icon-login"></i></button>
        
     </div>

@@ -31,7 +31,10 @@ export class IndexComponent implements OnInit {
   ngOnInit(): void {
     this.serviceProducto.getProductos().subscribe(productos => {
       this.productoVisibles = productos
+    })
 
+    this.service.currenProducto.subscribe(productos=>{
+      this.productoVisibles=productos
     })
     
   }

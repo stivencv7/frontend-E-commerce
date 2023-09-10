@@ -35,5 +35,5 @@
     </div>
 </div>
 <p-dialog header="Agregar Producto" [(visible)]="visible" [style]="{width: '50vw'}" >
-    <app-form-producto></app-form-producto>
+    <app-form-producto (outputVisible)="visible=$event" (ouputProductos)="ngOnInit()"></app-form-producto>
 </p-dialog>
