@@ -8,16 +8,17 @@
             </span>
         </div>
     </div>
+    <!--modoVisible() metodo para manejar sidebar de carro-->
     
     <div style="display: flex;gap: 15px;">
 
         <button (click)="modoVisible()" class="btn btn-car"><i class="bi bi-cart4 icon-login"></i>
-            <p-badge class="length" [value]="lengt"></p-badge>
+            <p-badge class="length" [value]="lengt"></p-badge><!--lengt Cantidad de productos que hay en le carro-->
         </button>
         <button class="btn btn-login"><i class="bi bi-person-circle icon-login"></i></button>
        
     </div>
 </nav>
-<p-sidebar [(visible)]="sidebarVisible" position="right" [style]="{ width: '30vw' }" >
-    <app-carro [items]="items" [valorTotal]="valorTotal"></app-carro>
+<p-sidebar [(visible)]="sidebarVisible" position="right" [style]="{ width: '30vw' }" ><!--componente de la libreria primeng-->
+    <app-carro [items]="items" [valorTotal]="valorTotal"></app-carro><!--Instancia del componente CarroComponent [items] atributo de CarroComponent items atributo de HeaderComponent lo mismo con [valorTatal] y valorTotal-->
 </p-sidebar>

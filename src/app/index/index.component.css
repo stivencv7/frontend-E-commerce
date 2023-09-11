@@ -9,7 +9,7 @@ gap: 40px;
 .card-index{
     display: flex;
     width:30%;
-    /*box-shadow: 5px 7px 5px 5px rgb(240, 214, 211);*/
+    box-shadow: 5px 7px 5px 5px rgb(240, 214, 211);
     
     
 }

@@ -10,8 +10,10 @@ import swal from 'sweetalert2';
 })
 export class MenuComponent {
   value:number=500000
-  filterVisible:boolean=false;
+  filterVisible:boolean=false;//variable para ver los filtros
+  
   constructor(private serviceProducto:ProductoService,private servcie:ServiceService){}
+  //para listar por rangos 
   rango(cantidad:number){
     console.log(cantidad)
     this.serviceProducto.getRangoPrecio(cantidad).subscribe(productos=>{
@@ -22,7 +24,8 @@ export class MenuComponent {
       }
     })
   }
-
+  
+  //para manejar la visibilidad de los filtros
   modoVisibleFilter(){
     if (!this.filterVisible) {
       this.filterVisible=true;

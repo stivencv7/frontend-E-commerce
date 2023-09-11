@@ -16,7 +16,8 @@ export class FormProductoComponent implements OnInit {
   public producto:Producto=new Producto();
   public categoria:Categoria=new Categoria();
   public categorias:Categoria[];
-  @Output()
+  
+  @Output()//se utiliza para emitir eventos desde un componente hijo hacia su padre permite la comunicacion entre componente
   outputVisible=new EventEmitter<boolean>();
 
   @Output()
@@ -47,7 +48,7 @@ export class FormProductoComponent implements OnInit {
   deleteImage() {
     this.imageUrl = '';
   }
-
+ // metodo para registrar un producto
   registraProducto(){
     this.producto.categoria=this.categoria
     this.producto.urlImg=this.imageUrl;
@@ -58,9 +59,10 @@ export class FormProductoComponent implements OnInit {
     })
   }
 
+  
   getProductos(){
     this.serviceProducto.getProductos().subscribe(productos=>{
-      this.ouputProductos.emit(productos);
+      this.ouputProductos.emit(productos);//para pasarle el valor al padre
     })
   }
 }
