@@ -8,8 +8,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 50%;
+    /*justify-content: center;*/
+    height: 70%;
     box-shadow: 5px 3px 6px rgb(226, 226, 226) ;
     position: fixed;
     z-index: 300px;

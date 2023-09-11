@@ -14,8 +14,9 @@
 .letra-logo{
     
     color:rgb(68, 158, 243);
-    /*color: #FF9B50;*/
-    color:rgb(255, 119, 0);
+    /*color: #FF9B50;
+    color:rgb(255, 119, 0);*/
+    color:#Ff6600;
 }
 .logo{
     font-family: 'Caveat', cursive;
@@ -27,4 +28,8 @@
 .div-header-logo-input{
    display: flex; align-items: center; gap: 30px;
    width: 49%;
+}
+
+.btn-car{
+    position: relative;
 }

@@ -1,7 +1,8 @@
+<div class="pared-menu"></div>
 <div class="div-menu">
 
     <h6>Menu</h6>
-    
+
     <div>
         <a [routerLink]="['/index']"><i class="bi bi-shop-window"></i> Inicio</a>
     </div>
@@ -9,15 +10,41 @@
     <div>
         <a [routerLink]="['/form/registrase']"><i class="bi bi-person-lines-fill"></i> Registrarse</a>
     </div>
-    <div>
-        <a [routerLink]="['/form/registrase']"><i class="bi bi-funnel"></i> Filter</a>
-        <br>
-        <p-slider ngModel="0" [min]="100" [max]="10000000" (ngModelChange)="rango($event)"></p-slider>
-    </div>
+
     <div>
         <a [routerLink]="['/inventario']"><i class="bi bi-journal-text"></i> Inventario</a>
     </div>
-</div>
-   
-   
 
+    <div>
+        <div (click)="modoVisibleFilter()"><i class="bi bi-funnel"></i> Filter v</div>
+        <div style="height: 4vh;">
+            <div style="height: 10vh;padding: 0px;margin-left:12px;border-left: 1px solid rgb(226, 226, 226) ; padding-left:7px ;margin-top:7px;" *ngIf="filterVisible else block ">
+                <div style="margin-bottom: 7px;">
+                    <h6>$</h6>
+                    
+                    <input type="text" pInputText [(ngModel)]="value" class="w-full"/>
+                    <p-slider [(ngModel)]="value" [min]="3" [max]="50000" (ngModelChange)="rango($event)"></p-slider>
+                </div>
+                <br>
+                <div>
+                   <select class="form-select" name="" id="">
+                        <option value="" [selected]="true">categorias</option>
+                        <option value="">Sala</option>
+                        <option value="">Electrodomesticos</option>
+                        <option value="">Tecnologia</option>
+                        <option value="">Deporte</option>
+                   </select>
+                </div>
+                
+            </div>
+            <ng-template #block>
+
+            </ng-template>
+        </div>
+
+
+
+
+
+    </div>
+</div>

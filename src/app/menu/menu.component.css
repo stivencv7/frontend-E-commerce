@@ -1,7 +1,10 @@
 .div-menu{
-    margin-top: 30px;
+    
     display: flex;
     flex-direction: column;
     gap: 20px;
     
+}
+.pared-menu{
+    margin-top: 100px;
 }

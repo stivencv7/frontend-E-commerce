@@ -19,8 +19,7 @@ export class CarroComponent implements OnInit {
   
   ngOnInit(): void {
     this.carroService.getItems().subscribe(items => {
-     
-      this.items = items as Item[];
+      this.items = items as Item[];// se carga todo los items del carro de compras
     })
     /*this.getTotal();*/
   }
@@ -32,8 +31,8 @@ export class CarroComponent implements OnInit {
       
     });
   }*/
-
-  constructor(private carroService: CarrService) { }
+  //injectamos por construtor
+  constructor(private carroService: CarrService) { }//inyectamos el servcio de carro por contructor
   
   verTotal(numero:number,item:Item){
     console.log("item: "+item.producto.nombre+" number: "+numero)

@@ -23,6 +23,7 @@ import{DialogModule} from 'primeng/dialog';
 import{SidebarModule} from 'primeng/sidebar';
 import { SliderModule } from 'primeng/slider';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { BadgeModule } from 'primeng/badge';
 
 import { CategoriaComponent } from './inventario/categoria/categoria.component';
 import { CarroComponent } from './carro-compras/carro.component';
@@ -64,6 +65,7 @@ const routes:Routes=[
     SidebarModule,
     InputNumberModule,
     SliderModule,
+    BadgeModule,
     RouterModule.forRoot(routes)
     
   ],

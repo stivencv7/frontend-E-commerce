@@ -30,21 +30,23 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
     this.serviceProducto.getProductos().subscribe(productos => {
-      this.productoVisibles = productos
+      this.productoVisibles = productos //llenamos la lista de productos visibles
+    })
 
+    this.service.currenProducto.subscribe(productos=>{
+      this.productoVisibles=productos //servicio que reaciona al cambio de las lista
     })
     
   }
-
- 
-lengt:string;
+  
+  //Agregamos un Item al carrito
   guardarItem(producto:Producto){
     this.item.producto=producto;
     this.item.cantidad=1;
-    this.serviceCarro.addItem(this.item).subscribe(response=>{
+    this.serviceCarro.addItem(this.item).subscribe(response=>{//servicio del carro de compras
       this.serviceCarro.getItems().subscribe(items=>{ 
        this.items=items;
-       this.service.chageMensaje(items.length)
+       this.service.chageMensaje(items.length)//reaciona al cambio de la cantidad items que hay en el producto
        localStorage.setItem("longitud",this.items.length.toString());
       })
 

@@ -10,4 +10,18 @@ a{
     width: 80px ;
 }
 
+.length .p-badge{
+    /*background: #000080;*/
+    background: #Ff6600;
+    position: absolute;
+    top: 0px;
+    font-size: 15px;
+}
+
+
+.length{
+    margin-bottom: 1px;
+}
+
+
 

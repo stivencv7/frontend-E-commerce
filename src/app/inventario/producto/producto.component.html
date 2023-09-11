@@ -20,7 +20,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let producto of productos">
+                <tr *ngFor="let producto of productos"><!--for que recorre la lista productos-->
                     <td>{{producto.nombre}}</td>
                     <td>{{producto.categoria.nombre}}</td>
                     <td>{{producto.fechaRegistro}}</td>
@@ -35,5 +35,6 @@
     </div>
 </div>
 <p-dialog header="Agregar Producto" [(visible)]="visible" [style]="{width: '50vw'}" >
-    <app-form-producto></app-form-producto>
+    <app-form-producto (outputVisible)="visible=$event" (ouputProductos)="ngOnInit()"></app-form-producto>
+    <!--(outputVisible)="visible=$event" valor que seleda a la variable visible-->
 </p-dialog>

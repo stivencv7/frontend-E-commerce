@@ -10,6 +10,13 @@ export class CarrService {
 
   constructor(private http:HttpClient) { }
 
+  /**
+   * getItems() para traer los productos que ahi en el carro
+   * addItem() para guardar un producto en le carro
+   * uodateItem() para actualizar cantidad del carro
+   * 
+   * @returns 
+   */
   getItems():Observable<Item[]>{
     return this.http.get<Item[]>("http://localhost:8080/items");
   }
